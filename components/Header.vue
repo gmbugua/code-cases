@@ -97,7 +97,6 @@ export default {
   .name {
     @apply 
       flex
-      items-center
       font-semibold
       sm:flex-col
   }

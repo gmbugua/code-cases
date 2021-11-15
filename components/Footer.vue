@@ -53,6 +53,10 @@ export default {
     @apply h-28 w-52;
   }
 
+  .footer p {
+    
+  }
+
   .footer-inner {
     @apply
       h-full
@@ -61,7 +65,7 @@ export default {
       cursor-pointer
       shadow-md;
     transition: transform 1s;
-    transition-delay: .3s;
+    transition-delay: .5s;
     transform-style: preserve-3d;
   }
 
