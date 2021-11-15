@@ -1,5 +1,5 @@
 <script> 
-  import dateMixin from '../../mixins/dateMixin'
+  import dateMixin from '~/mixins/dateMixin'
   export default {
     mixins: [dateMixin],
     async asyncData({ $content, params }) {

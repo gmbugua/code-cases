@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import GithubLogo from '~/assets/github_logo.svg?inline'
-import LinkedIn from '~/assets/linkedin_logo.svg?inline'
+import GithubLogo from '~/assets/svg/github_logo.svg?inline'
+import LinkedIn from '~/assets/svg/linkedin_logo.svg?inline'
 export default {
   components: {
     LinkedIn,
@@ -40,8 +40,6 @@ export default {
       isFlipped: false
     }
   },
-  methods: {
-  }
 }
 
 

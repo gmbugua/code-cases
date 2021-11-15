@@ -24,18 +24,12 @@
   import BlogItem from '~/components/BlogItem.vue'
   import Footer from '~/components/Footer.vue'
   import Header from '~/components/Header.vue'
-  import DarkModeToggle from '~/components/DarkModeToggle.vue'
-  import SeatedMan from '~/assets/seated_man.svg?inline'
-  import SeatedManDark from '~/assets/seated_man_dark.svg?inline'
 
   export default {
     components: {
         BlogItem,
-        SeatedMan,
-        SeatedManDark,
         Footer,
         Header,
-        DarkModeToggle
     },
     async asyncData({ $content, params }) {
       const articles = await $content('articles')

@@ -7,7 +7,7 @@
     <div class="sub-header">
       <div class="sub-header-left">
         <p class="intro-text">blog written by</p>
-        <img class="headshot cropped" src="~/assets/headshot.jpeg" alt="" >
+        <img class="headshot cropped" src="~/assets/img/headshot.jpeg" alt="" >
         <div class="name">
           <p class="first-name">George</p>
           <p class="last-name">Mbugua</p>
@@ -23,8 +23,8 @@
 
 <script>
 import DarkModeToggle from '~/components/DarkModeToggle.vue'
-import SeatedMan from '~/assets/seated_man.svg?inline'
-import SeatedManDark from '~/assets/seated_man_dark.svg?inline'
+import SeatedMan from '~/assets/svg/seated_man.svg?inline'
+import SeatedManDark from '~/assets/svg/seated_man_dark.svg?inline'
 export default {
   components: {
     SeatedMan,
