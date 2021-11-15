@@ -3,7 +3,7 @@
 
 ## Personal Blog By George Mbugua
 Blog covers my experience as a developer and the highlights of the projects/work I do during my day to day (Arranged in a ***Cold Case*** manner :wink:)
-![Blog Demo](./assets/imgs/demo.gif)
+![Blog Demo](./assets/doc/demo.gif)
 
 *  **Stay tuned** for a post about how I built the blog!
 * Designed on **[Figma](https://www.figma.com/community/explore)** :triumph:
