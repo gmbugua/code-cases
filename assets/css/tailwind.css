@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-ocean-default dark:bg-navy-default;
+  transition: background-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
