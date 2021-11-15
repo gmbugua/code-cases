@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/", {data:[{articles:[{slug:"test-post0",description:"a test post to ensure data extraction works",title:"Test Post",timeToRead:5,updatedAt:"2021-11-15T03:58:41.690Z"}]}],fetch:{},mutations:void 0});
