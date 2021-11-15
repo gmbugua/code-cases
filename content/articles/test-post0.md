@@ -1,5 +1,5 @@
 ---
-title: test-post0
+title: Test Post
 description: a test post to ensure data extraction works
 timeToRead: 5
 ---

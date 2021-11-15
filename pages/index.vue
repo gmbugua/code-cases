@@ -1,12 +1,7 @@
 <template>
   <div class="main">
-    <div class="header-container">
-      <Header class="header-left"/>
-      <div class="header-right">
-        <DarkModeToggle id="dark-mode-toggle" :checked="this.isDarkMode" @test-click='handleTestClick'/>
-        <SeatedMan />
-      </div>
-    </div>
+
+    <Header class="main-header" />
 
     <ul class="blog-list">
       <li v-for="article of articles" :key="article.slug" class="blog-item">
@@ -31,24 +26,16 @@
   import Header from '~/components/Header.vue'
   import DarkModeToggle from '~/components/DarkModeToggle.vue'
   import SeatedMan from '~/assets/seated_man.svg?inline'
+  import SeatedManDark from '~/assets/seated_man_dark.svg?inline'
 
   export default {
     components: {
         BlogItem,
         SeatedMan,
+        SeatedManDark,
         Footer,
         Header,
         DarkModeToggle
-    },
-    head() {
-      return {
-        script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
-      }
-    },
-    data() {
-      return {
-        isDarkMode: false,
-      }
     },
     async asyncData({ $content, params }) {
       const articles = await $content('articles')
@@ -59,16 +46,6 @@
         articles
       }
 
-    },
-    methods: {
-      handleTestClick(checked) {
-        this.isDarkMode = checked;
-        if (this.isDarkMode === true) {
-          document.documentElement.classList.add('dark')
-        } else [
-          document.documentElement.classList.remove('dark')
-        ]
-      }
     },
   }
 </script>
@@ -92,27 +69,8 @@
 
     height: 100%;
   }
-
-  .header-container {
-    @apply 
-      flex 
-      items-center 
-      justify-between 
-      self-center 
-      w-full
-  }
-
-  .header-left {
-    @apply flex-grow;
-  }
-
-
-  .header-right {
-    @apply flex flex-col items-end top-2 relative
-  }
-
-  .header-right #dark-mode-toggle {
-    @apply mb-10
+  .main-header {
+    @apply relative top-2
   }
 
   .blog-item {

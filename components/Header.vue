@@ -2,68 +2,124 @@
   <div>
     <div class="header">
       <h1>The Code Cases</h1>
+      <DarkModeToggle id="dark-mode-toggle" :checked="isDarkMode" @test-click='handleTestClick'/>
     </div>
     <div class="sub-header">
-      <div class="intro-text-container">
-        <p>blog written by</p>
+      <div class="sub-header-left">
+        <p class="intro-text">blog written by</p>
+        <img class="headshot cropped" src="~/assets/headshot.jpeg" alt="" >
+        <div class="name">
+          <p class="first-name">George</p>
+          <p class="last-name">Mbugua</p>
+        </div>
       </div>
-      <div class="headshot-container">
-        <img class="cropped" src="~/assets/headshot.jpeg" alt="" >
-        <p class="headshot-caption">Dev | Design | Drive</p>
-      </div>
-      <div class="name-container">
-        <p class="first-name">George</p>
-        <p class="last-name">Mbugua</p>
+      <div class="sub-header-right">
+        <SeatedMan v-if="!this.isDarkMode"/> 
+        <SeatedManDark v-if="this.isDarkMode"/>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+import DarkModeToggle from '~/components/DarkModeToggle.vue'
+import SeatedMan from '~/assets/seated_man.svg?inline'
+import SeatedManDark from '~/assets/seated_man_dark.svg?inline'
+export default {
+  components: {
+    SeatedMan,
+    SeatedManDark,
+    DarkModeToggle
+  },
+  data() {
+    return {
+      isDarkMode: false,
+    }
+  },
+  methods: {
+    handleTestClick(checked) {
+      this.isDarkMode = checked;
+      if (this.isDarkMode === true) {
+        document.documentElement.classList.add('dark')
+      } else [
+        document.documentElement.classList.remove('dark')
+      ]
+    }
+  },
+}
+</script>
+
+
 
 <style lang="postcss" scoped>
-  .cropped {
-    @apply h-24 rounded-full object-contain;
-  }
   .header {
     @apply 
-      flex 
-      justify-between 
-      items-center 
-      w-full
-      font-fira-code
-      font-bold
-      text-5xl
+      flex
+      sm:items-center 
+      sm:justify-between 
       pb-7
-      text-navy-lighter
+      text-5xl
+      font-bold
+      text-navy-default
       dark:text-white;
   }
+
   .sub-header {
-    @apply flex items-start flex-col sm:flex-row sm:items-center
-  }
-  .headshot-container {
-    @apply flex flex-col items-center
+    @apply flex justify-between
   }
 
-  .headshot-caption {
-    @apply dark:text-white font-fira-code font-medium
+  .sub-header-left {
+    @apply 
+      flex 
+      flex-col
+      sm:flex-row 
+      items-start
+      sm:items-center
   }
 
-  .intro-text-container {
-    @apply self-start text-ocean-lightest
-  }
-  .name-container {
-    @apply flex sm:flex-col font-fira-code font-semibold
+  .sub-header-right {
   }
 
-  .name-container .first-name {
-    @apply text-navy-lighter dark:text-white text-xl
+
+  .intro-text {
+    @apply
+      mb-3
+      sm:mr-5
+      sm:self-start
+      text-navy-default 
+      dark:text-ocean-lightest
   }
 
-  .name-container .last-name {
-    @apply text-coral-darker dark:text-coral-default text-3xl
+  .headshot {
+    @apply mr-0 mb-3 sm:mr-5
   }
-  
-  .name-container .first-name {
-    @apply mr-2
+
+  .name {
+    @apply 
+      flex
+      items-center
+      font-semibold
+      sm:flex-col
   }
+
+  .name .first-name {
+    @apply
+      mr-3
+      text-navy-lighter 
+      dark:text-white text-xl
+  }
+
+  .name .last-name {
+    @apply
+      text-coral-darker 
+      dark:text-coral-default text-2xl
+  }
+
+  .cropped {
+    @apply 
+      h-24 
+      rounded-full 
+      object-contain;
+  }
+
 </style>

@@ -1,14 +1,17 @@
 <template>
   <div class="item">
-    <div id="item-content">
-      <div id="left">
-        <h1>{{ title.toLowerCase() }}</h1>
-        <p>{{ formatDate(lastUpdated).toLowerCase() }} </p>
-      </div>
-      <div id="right">
-        <p id="timeToRead">{{ coffees(timeToRead) }} {{ timeToRead }} min read</p>
-      </div>
-    </div>
+
+      <section class="item-left">
+        <div class="item-title-date">
+          <h1 class="item-title">{{ title.toLowerCase() }}</h1>
+          <p class="item-date">{{ formatDate(lastUpdated).toLowerCase() }} </p>
+        </div>
+        <p class="item-description">{{ description }}</p>
+      </section>
+
+      <section class="item-right">
+        <p class="item-read-time">{{ coffees(timeToRead) }} {{ timeToRead }} min read</p>
+      </section>
   </div>
 </template>
 
@@ -44,7 +47,8 @@ export default {
   .item {
     @apply 
       flex
-      flex-col
+      items-center
+      justify-between
       p-5
       rounded-md
       shadow-md
@@ -52,20 +56,28 @@ export default {
       bg-ocean-lighter;
   }
 
-  .item:hover #timeToRead {
+  .item:hover .item-read-time  {
     @apply opacity-100;
     transition: opacity 600ms linear;
   }
 
-  #item-content {
-    @apply flex justify-between
-  }
-
-  #left p,h1 {
+  .item-title-date p,h1 {
     @apply pr-2 inline-block;
   }
 
-  #timeToRead {
+  .item-title {
+    @apply text-lg
+  }
+
+  .item-date {
+    @apply text-sm
+  }
+
+  .item-description {
+    @apply text-sm
+  }
+
+  .item-read-time {
     @apply opacity-0;
     transition: opacity 400ms ease-in
   }

@@ -9,4 +9,4 @@ Blog covers my experience as a developer and the highlights of the projects/work
 ## Stack / Architecture
 * **Front-End Framework** - Vue JS
 * **CSS Framework** - Tailwind CSS
-* **Headless CMS** - Netlify + Nuxt Content
+* **Headless CMS** - Nuxt Content

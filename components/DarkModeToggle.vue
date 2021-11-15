@@ -5,9 +5,6 @@
   </label>
 </template>
 
-<script>
-</script>
-
 
 <style lang="postcss" scoped>
   /* The switch - the box around the slider */
@@ -49,7 +46,7 @@
       w-7
       left-1
       bottom-1
-      bg-white;
+      bg-ocean-lighter;
     
     content: "";
     -webkit-transition: .4s;
@@ -57,7 +54,7 @@
   }
 
   input:checked + .slider {
-    @apply bg-ocean-default;
+    @apply bg-navy-default
   }
 
   input:focus + .slider {
