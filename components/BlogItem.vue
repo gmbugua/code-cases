@@ -10,7 +10,7 @@
       </section>
 
       <section class="item-right">
-        <p class="item-read-time">{{ coffees(timeToRead) }} {{ timeToRead }} min read</p>
+        <p class="item-read-time">{{ coffees(timeToRead) }} {{timeToRead}} min</p>
       </section>
   </div>
 </template>

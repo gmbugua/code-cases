@@ -67,7 +67,7 @@ export default {
     transform-style: preserve-3d;
   }
 
-  .footer-inner:hover {
+  .footer-inner:hover, .footer-inner:active {
     transform: rotateY(180deg);
   }
 
