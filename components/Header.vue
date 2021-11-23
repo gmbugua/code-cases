@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <h1>The Code Cases</h1>
+      <h1 id="title">The Code Cases</h1>
       <DarkModeToggle id="dark-mode-toggle" :checked="isDarkMode" @test-click='handleTestClick'/>
     </div>
     <div class="sub-header">
@@ -14,8 +14,8 @@
         </div>
       </div>
       <div class="sub-header-right">
-        <SeatedMan v-if="!this.isDarkMode"/> 
-        <SeatedManDark v-if="this.isDarkMode"/>
+        <SeatedMan id="seated-man" v-if="!this.isDarkMode"/> 
+        <SeatedManDark id="seated-man" v-if="this.isDarkMode"/>
       </div>
     </div>
   </div>
@@ -55,17 +55,19 @@ export default {
   .header {
     @apply 
       flex
+      sm:flex-row
       sm:items-center 
       sm:justify-between 
-      pb-7
-      text-5xl
+      sm:pb-7
+      flex-col-reverse
+      pb-2
       font-bold
       text-navy-default
       dark:text-white;
   }
 
   .sub-header {
-    @apply flex justify-between
+    @apply flex flex-col sm:flex-row sm:justify-between 
   }
 
   .sub-header-left {
@@ -73,7 +75,7 @@ export default {
       flex 
       flex-col
       sm:flex-row 
-      items-start
+      items-center
       sm:items-center
   }
 
@@ -99,6 +101,7 @@ export default {
       flex
       font-semibold
       sm:flex-col
+      items-center
   }
 
   .name .first-name {
@@ -119,6 +122,18 @@ export default {
       h-24 
       rounded-full 
       object-contain;
+  }
+
+  #seated-man {
+    @apply hidden sm:block
+  }
+
+  #title { 
+    @apply sm:text-5xl text-3xl self-center
+  }
+
+  #dark-mode-toggle {
+    @apply sm:mb-0 mb-7;
   }
 
 </style>
