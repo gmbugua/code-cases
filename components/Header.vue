@@ -101,20 +101,26 @@ export default {
       flex
       font-semibold
       sm:flex-col
+      sm:items-start
       items-center
   }
 
   .name .first-name {
     @apply
-      mr-3
+      sm:mr-0
+      mr-2
       text-navy-lighter 
-      dark:text-white text-xl
+      dark:text-white 
+      sm:text-2xl
+      text-2xl
   }
 
   .name .last-name {
     @apply
       text-coral-darker 
-      dark:text-coral-default text-2xl
+      dark:text-coral-default 
+      sm:text-3xl
+      text-2xl
   }
 
   .cropped {
