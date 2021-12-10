@@ -72,6 +72,6 @@ ul {
 }
 
 .footer {
-  @apply flex justify-center self-center;
+  @apply flex;
 }
 </style>

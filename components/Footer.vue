@@ -1,90 +1,57 @@
 <template>
   <div class="footer">
-    <div class="footer-inner" >
-
-      <div class="footer-face footer-front">
-        <p> contact me </p>
-      </div>
-
-      <div class="footer-face footer-back">
-        <div>
-          <a target="_blank" 
-              rel="noopener noreferrer" 
-              href="https://www.linkedin.com/in/george-mwicigi-mbugua/">
-            <LinkedIn />
-          </a>
-        </div>
-        <div>
-          <a target="_blank" 
-              rel="noopener noreferrer" 
-              href="https://github.com/gmbugua">
-            <GithubLogo />
-          </a>
-        </div>
-      </div>
-
-    </div>
+    <a target="_blank" rel="noopener noreferrer" href=""> RSS </a>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://www.linkedin.com/in/george-mwicigi-mbugua/"
+    >
+      LinkedIn
+    </a>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://github.com/gmbugua"
+    >
+      Github
+    </a>
   </div>
 </template>
 
 <script>
-import GithubLogo from '~/assets/svg/github_logo.svg?inline'
-import LinkedIn from '~/assets/svg/linkedin_logo.svg?inline'
 export default {
-  components: {
-    LinkedIn,
-    GithubLogo
-  },
   data() {
     return {
-      isFlipped: false
-    }
+      isFlipped: false,
+    };
   },
-}
-
-
+};
 </script>
 
 <style lang="postcss" scoped>
+a {
+  @apply mr-3
+    text-base
+    font-bold
+  text-navy-lighter
+  border-ocean-default
+  dark:text-ocean-default
+  dark:border-navy-lighter
+    no-underline;
 
-  .footer {
-    @apply h-28 w-52;
-  }
+  border-bottom: 0.25rem solid;
+}
 
-  .footer p {
-    
-  }
+a:hover {
+  @apply ease-linear
+    transition-colors
+    text-navy-default
+    border-ocean-lightest
+    dark:text-ocean-lightest;
+}
 
-  .footer-inner {
-    @apply
-      h-full
-      w-full
-      relative
-      cursor-pointer
-      shadow-md;
-    transition: transform 1s;
-    transition-delay: .5s;
-    transform-style: preserve-3d;
-  }
-
-  .footer-inner:hover, .footer-inner:active {
-    transform: rotateY(180deg);
-  }
-
-  .footer-face {
-    @apply w-full h-full rounded-lg absolute bg-ocean-lighter;
-    --webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-  }
-
-  .footer-front {
-    @apply flex items-center justify-center;
-  }
-
-  .footer-back {
-    @apply flex items-center justify-evenly;
-    transform: rotateY(180deg);
-  }
-
+.footer {
+  @apply flex
+      justify-evenly;
+}
 </style>
