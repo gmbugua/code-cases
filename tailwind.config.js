@@ -1,10 +1,11 @@
 module.exports = {
   darkMode: "class",
   theme: {
+    fontFamily: {
+      sans: ['Fira Code', 'sans-serif'],
+      serif: ['Cardo', 'serif']
+    },
     extend: {
-      fontFamily: {
-        'fira-code': ['Fira Code', 'monospace']
-      },
       colors: {
         navy: {
           darker: "#1F2633",

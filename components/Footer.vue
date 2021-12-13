@@ -13,7 +13,7 @@
       rel="noopener noreferrer"
       href="https://github.com/gmbugua"
     >
-      Github
+      GitHub
     </a>
   </div>
 </template>
@@ -31,15 +31,16 @@ export default {
 <style lang="postcss" scoped>
 a {
   @apply mr-3
-    text-base
+    text-sm
     font-bold
+    border-b-4
   text-navy-lighter
-  border-ocean-default
+  border-ocean-lighter
   dark:text-ocean-default
   dark:border-navy-lighter
     no-underline;
 
-  border-bottom: 0.25rem solid;
+  /* border-bottom: 0.25rem solid; */
 }
 
 a:hover {

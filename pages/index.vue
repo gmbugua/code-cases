@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div>
     <Header class="main-header" />
 
     <ul class="blog-list">
@@ -60,8 +60,7 @@ ul {
       pb-11;
 }
 .main-header {
-  @apply 
-    sm:relative 
+  @apply sm:relative 
     sm:top-2
     sm:mb-0
     mb-5;

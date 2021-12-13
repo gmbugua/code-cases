@@ -55,15 +55,17 @@ export default {
   .header {
     @apply 
       flex
+      flex-col-reverse
+      pb-2
+      font-bold
+      leading-tight
+      font-sans
       sm:flex-row
       sm:items-center 
       sm:justify-between 
       sm:pb-7
-      flex-col-reverse
-      pb-2
-      font-bold
       text-navy-default
-      dark:text-white;
+      dark:text-white
   }
 
   .sub-header {
@@ -99,10 +101,11 @@ export default {
   .name {
     @apply 
       flex
+      items-center
       font-semibold
+      font-sans
       sm:flex-col
       sm:items-start
-      items-center
   }
 
   .name .first-name {

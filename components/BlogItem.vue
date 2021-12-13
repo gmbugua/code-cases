@@ -10,13 +10,14 @@
       </section>
 
       <section class="item-right">
-        <p class="item-read-time">{{ coffees(timeToRead) }} {{timeToRead}} min</p>
+        <ReadTime class="item-read-time " :timeToRead="timeToRead"/>
       </section>
   </div>
 </template>
 
 <script>
 import dateMixin from '~/mixins/dateMixin'
+import ReadTime from './ReadTime.vue'
 export default {
   name: 'BlogItem',
   props: [
@@ -25,21 +26,12 @@ export default {
     'description',
     'timeToRead'
   ],
+  components: {
+    ReadTime
+  },
   mixins: [
     dateMixin
   ],
-  methods: {
-    coffees(time) {
-      const emoji = "☕"
-      if (time <=5) {
-        return emoji.repeat(1)
-      } else if (time > 5 && time < 30) {
-        return emoji.repeat(2)
-      } else { 
-        return emoji.repeat(3)
-      }
-    }
-  }
 }
 </script>
 
