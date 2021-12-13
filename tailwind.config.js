@@ -2,7 +2,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ['Fira Code', 'sans-serif'],
+      sans: ['Fira Sans', 'sans-serif'],
       serif: ['Cardo', 'serif']
     },
     extend: {

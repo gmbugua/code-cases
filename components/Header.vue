@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <h1 id="title">The Code Cases</h1>
-      <DarkModeToggle id="dark-mode-toggle" :checked="isDarkMode" @test-click='handleTestClick'/>
+      <DarkModeToggle />
     </div>
     <div class="sub-header">
       <div class="sub-header-left">
@@ -14,8 +14,8 @@
         </div>
       </div>
       <div class="sub-header-right">
-        <SeatedMan id="seated-man" v-if="!this.isDarkMode"/> 
-        <SeatedManDark id="seated-man" v-if="this.isDarkMode"/>
+        <SeatedMan id="seated-man" v-if="!this.$store.state.isDarkMode"/> 
+        <SeatedManDark id="seated-man" v-if="this.$store.state.isDarkMode"/>
       </div>
     </div>
   </div>
@@ -31,24 +31,8 @@ export default {
     SeatedManDark,
     DarkModeToggle
   },
-  data() {
-    return {
-      isDarkMode: false,
-    }
-  },
-  methods: {
-    handleTestClick(checked) {
-      this.isDarkMode = checked;
-      if (this.isDarkMode === true) {
-        document.documentElement.classList.add('dark')
-      } else [
-        document.documentElement.classList.remove('dark')
-      ]
-    }
-  },
 }
 </script>
-
 
 
 <style lang="postcss" scoped>
