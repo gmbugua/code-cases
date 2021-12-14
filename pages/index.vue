@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <Header class="main-header" />
 
     <ul class="blog-list">
@@ -15,9 +15,7 @@
       </li>
     </ul>
 
-    <div class="footer">
-      <Footer />
-    </div>
+    <Footer />
   </div>
 </template>
 
@@ -49,16 +47,6 @@ ul {
   @apply pl-0 list-none;
 }
 
-.main {
-  @apply flex 
-      flex-col
-      mt-10
-      ml-auto 
-      mr-auto
-      max-w-4xl
-      px-11 
-      pb-11;
-}
 .main-header {
   @apply sm:relative 
     sm:top-2
@@ -68,9 +56,5 @@ ul {
 
 .blog-item {
   @apply mb-5;
-}
-
-.footer {
-  @apply flex;
 }
 </style>

@@ -9,3 +9,14 @@ body {
   @apply bg-ocean-default dark:bg-navy-darker;
   transition: background-color 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+.main {
+  @apply flex 
+      flex-col
+      mt-10
+      ml-auto
+      mr-auto
+      max-w-4xl
+      px-11 
+      pb-11;
+}

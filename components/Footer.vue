@@ -52,7 +52,6 @@ a:hover {
 }
 
 .footer {
-  @apply flex
-      justify-evenly;
+  @apply flex;
 }
 </style>
