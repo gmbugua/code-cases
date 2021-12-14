@@ -1,5 +1,5 @@
 # Code Cases
-[![Netlify Status](https://api.netlify.com/api/v1/badges/28de4f9e-47c6-4c7c-9c60-0b8b05f9d547/deploy-status)](https://code-cases.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/28de4f9e-47c6-4c7c-9c60-0b8b05f9d547/deploy-status)](https://code-cases.netlify.app/deploys)
 
 ## [Personal Blog](https://code-cases.netlify.app/) By George Mbugua
 Covers my experience as a developer and the highlights of what I work on during my free time (Arranged in a ***Cold Case*** manner :wink:)
