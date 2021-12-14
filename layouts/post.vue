@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import Footer from "~/components/Footer.vue"
+import Footer from "~/components/Footer.vue";
 import DarkModeToggle from "~/components/DarkModeToggle.vue";
 export default {
   components: {
     DarkModeToggle,
-    Footer
+    Footer,
   },
 };
 </script>
@@ -36,6 +36,7 @@ export default {
 
 #back-btn {
   @apply flex
+    cursor-pointer
     px-4
     py-2
     text-sm
@@ -50,8 +51,7 @@ export default {
 }
 
 #back-btn:hover {
-  @apply 
-    text-navy-lighter
+  @apply text-navy-lighter
     border-navy-lighter
     dark:text-navy-default
     dark:border-coral-default;

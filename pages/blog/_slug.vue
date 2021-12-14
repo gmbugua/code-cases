@@ -33,14 +33,13 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-  @apply 
-    sm:text-5xl 
-    text-3xl
-    text-navy-default
-    dark:text-ocean-lighter
+  @apply text-2xl
+    sm:text-4xl
     font-sans 
-    font-bold 
-    leading-tight;
+    font-bold
+    leading-tight
+    text-navy-default
+    dark:text-ocean-lighter;
 }
 
 .horiz-container {
@@ -52,6 +51,10 @@ h1 {
 }
 
 .sub-heading p {
-  @apply mr-3 text-lg text-navy-default dark:text-ocean-lighter font-light;
+  @apply mr-3 text-lg font-light text-navy-default dark:text-ocean-lighter;
+}
+
+.nuxt-content {
+  @apply prose prose-sm sm:prose lg:prose-lg xl:prose-2xl
 }
 </style>

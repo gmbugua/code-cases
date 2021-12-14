@@ -18,6 +18,7 @@ export default {
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -32,17 +33,37 @@ export default {
   ],
 
   svg: {
-    vueSvgLoader: {
+    vueSvgLoader: {},
+    svgSpriteLoader: {}
+  },
 
+  content: {
+    editor: "~/.nuxt/content/editor.vue",
+    apiPrefix: "_content",
+    dir: "content",
+    fullTextSearchFields: ["title", "description", "slug", "text"],
+    liveEdit: false,
+    useCache: false,
+    markdown: {
+      remarkPlugins: [
+      ],
+      rehypePlugins: [
+      ],
+      prism: {
+        theme: "prism-themes/themes/prism-material-oceanic.css"
+      }
     },
-    svgSpriteLoader: {
-
-    }
+    yaml: {},
+    csv: {},
+    xml: {},
+    extendParser: {}
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxt/content"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+
+  }
 };

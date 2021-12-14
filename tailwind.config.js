@@ -25,7 +25,9 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
   variants: {
     extend: {
       boxShadow: ['dark']
