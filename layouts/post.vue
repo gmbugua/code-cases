@@ -27,17 +27,17 @@ export default {
 
 <style lang="postcss" scoped>
 #post-header {
-  @apply flex justify-between items-center mx-6 mt-6;
+  @apply flex justify-between items-center mx-10 mt-6;
 }
 
 .post-content {
-  @apply max-w-6xl;
+  @apply max-w-4xl;
 }
 
 #back-btn {
   @apply flex
     cursor-pointer
-    px-4
+    px-5
     py-2
     text-sm
     font-semibold

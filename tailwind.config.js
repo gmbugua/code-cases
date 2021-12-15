@@ -2,8 +2,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ['Fira Sans', 'sans-serif'],
-      serif: ['Cardo', 'serif']
+      sans: ["Fira Sans", "sans-serif"],
+      serif: ["Cardo", "serif"]
     },
     extend: {
       colors: {
@@ -25,12 +25,10 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    require('@tailwindcss/typography')
-  ],
+  plugins: [require("@tailwindcss/typography")],
   variants: {
     extend: {
-      boxShadow: ['dark']
+      boxShadow: ["dark"]
     }
   },
   purge: {
@@ -43,4 +41,3 @@ module.exports = {
     ]
   }
 };
-

@@ -15,7 +15,6 @@ export default {
 };
 </script>
 
-
 <template>
   <div>
     <article>
@@ -33,7 +32,8 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-  @apply text-2xl
+  @apply 
+    text-2xl
     sm:text-4xl
     font-sans 
     font-bold
@@ -55,6 +55,18 @@ h1 {
 }
 
 .nuxt-content {
-  @apply prose prose-sm sm:prose lg:prose-lg xl:prose-2xl
+  @apply prose prose-sm sm:prose-lg;
+}
+
+.nuxt-content ul li:before {
+  @apply bg-navy-default dark:bg-navy-lighter
+}
+
+.nuxt-content :is(h1, h2, h3, h4, h5, h6) {
+  @apply font-sans text-navy-default dark:text-ocean-default;
+}
+
+.nuxt-content :is(p, ul) {
+  @apply font-serif text-navy-default dark:text-ocean-lighter;
 }
 </style>

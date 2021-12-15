@@ -16,6 +16,7 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -25,12 +26,9 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  // https://go.nuxtjs.dev/tailwindcss
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/svg"
-  ],
+  buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/svg"],
 
   svg: {
     vueSvgLoader: {},
@@ -45,10 +43,8 @@ export default {
     liveEdit: false,
     useCache: false,
     markdown: {
-      remarkPlugins: [
-      ],
-      rehypePlugins: [
-      ],
+      remarkPlugins: [],
+      rehypePlugins: [],
       prism: {
         theme: "prism-themes/themes/prism-material-oceanic.css"
       }
@@ -63,7 +59,5 @@ export default {
   modules: ["@nuxt/content"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-
-  }
+  build: {}
 };

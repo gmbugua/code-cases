@@ -25,6 +25,13 @@ import Footer from "~/components/Footer.vue";
 import Header from "~/components/Header.vue";
 
 export default {
+  beforeMount() {
+    const isWindowDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    if (isWindowDarkMode) {
+      document.documentElement.classList.toggle("dark")
+    }
+    this.$store.isDarkMode = isWindowDarkMode
+  },
   components: {
     BlogItem,
     Footer,
