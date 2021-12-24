@@ -1,7 +1,6 @@
 <script>
 import dateMixin from "~/mixins/dateMixin";
 import ReadTime from "~/components/ReadTime.vue";
-import DarkModeToggle from "~/components/DarkModeToggle.vue";
 export default {
   layout: "post",
   mixins: [dateMixin],
@@ -32,8 +31,7 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-  @apply 
-    text-2xl
+  @apply text-2xl
     sm:text-4xl
     font-sans 
     font-bold
@@ -58,8 +56,33 @@ h1 {
   @apply prose prose-sm sm:prose-lg;
 }
 
+.nuxt-content strong {
+  @apply font-serif font-bold text-navy-default dark:text-ocean-default;
+}
+
+.nuxt-content a {
+  @apply border-b-4
+  text-navy-lighter
+  border-ocean-lighter
+  dark:text-ocean-default
+  dark:border-navy-lighter
+    no-underline;
+}
+
+.nuxt-content a:hover {
+  @apply ease-linear
+    transition-colors
+    text-navy-default
+    border-ocean-lightest
+    dark:text-ocean-lightest;
+}
+
 .nuxt-content ul li:before {
-  @apply bg-navy-default dark:bg-navy-lighter
+  @apply bg-navy-default dark:bg-navy-lighter;
+}
+
+.nuxt-content ol ol:before {
+  @apply font-serif text-navy-default dark:text-ocean-default;
 }
 
 .nuxt-content :is(h1, h2, h3, h4, h5, h6) {

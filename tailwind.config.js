@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Fira Sans", "sans-serif"],
-      serif: ["Cardo", "serif"]
+      serif: ["Roboto Slab", "serif"]
     },
     extend: {
       colors: {

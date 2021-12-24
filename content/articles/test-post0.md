@@ -3,28 +3,39 @@ title: How to Build a Blog w/ Nuxt.js & Nuxt Content
 description: a test post to ensure data extraction works
 timeToRead: 5
 ---
-### Building a blog can be a challenge
+### Building a blog can be challenging
 
-> **Should I even build my own?**
-> **How do I build one?** 
-> **What CMS do I need?** 
+During the early stages of developing my own blog [Code Cases](https://code-cases.netlify.app/), a notable question was: 
 
-These are all questions I had during the early stages of developing my own blog: [Code Cases](). At first, I almost considered going the Medium route: 
+> Should I even build my own?
 
-* Audience is baked in
-* No design or dev time
-* Automatic SEO
+In fact, I considered going down the [Medium](https://medium.com/) route because of convenience:
+* **Audience is baked in**
+* **No design or dev time**
+* **Automatic SEO**
+* **Much less research**
 
-The list goes on; But I am a dev. These are all features I can add to my own blog over time which adds to my portfolio, and gives me credability to create content based on those achievements. So...quite literally:
+However, my desire to learn how to build my own blog trumped the ease of baked in functionality and audience from other platforms. 
 
-> **Why not build your own experience?**
+Also, those were all features I could ultimately learn how to implement and consequently: blog about!
 
-And If I may: **this is the part where our two individual stories intersect.**
+So...quite literally:
+
+> Why not build your own experience?
+
+In this HowTo we will:
+
+1. Lay down the necesssary infrastructure for a blog
+  * CMS
+  * Static Hosting
+  * Displaying our Posts
+  * Styling our Markdown using Tailwind CSS
+2. Deploy 1 to [Netlify](https://www.netlify.com/) so your audience can start reading your content as soon as you are done.
 
 ## Requirements
 
-* Node Version - LTS (Latest Stable Version)
-  > [Install Node using NVM](https://heynode.com/tutorial/install-nodejs-locally-nvm/)
+* Node JS vLTS (Latest Stable Version)
+  [Install Node w/ NVM](https://heynode.com/tutorial/install-nodejs-locally-nvm/)
 * Yarn Package Manager
   ```shell 
     # install yarn
@@ -33,14 +44,11 @@ And If I may: **this is the part where our two individual stories intersect.**
     # verify installation
     yarn --version
   ```
-* Vue.js
-* Nuxt.js
-* Nuxt Content
-* Tailwind CSS
+* Vue 3 and Nuxt JS (v2.15.x)
+* Nuxt Content (v1.15.x)
+* Tailwind CSS 
 
 ## Installation
-
-
 Run the following command to initialize your project:
 
 ```shell
@@ -50,7 +58,7 @@ yarn create nuxt-app <project-name>
 
 Follow the guide given your expertise, however the following settings are **required** in this tutorial:
 
-* **UI framework:** Tailwind CSS
+* **CSS framework:** Tailwind CSS
 * **Nuxt.js Modules:** Content - Git Based Headless CMS
 * **Rendering Mode:** Universal (SSR / SSG)
 * **Deployment Target:** Static (Static/Jamstack hosting)
@@ -73,5 +81,3 @@ yarn dev
 ```
 
 ## Configuration
-
-Start off by clearing out 
