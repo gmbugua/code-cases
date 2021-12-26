@@ -10,14 +10,14 @@ During the early stages of developing my own blog [Code Cases](https://code-case
 > Should I even build my own?
 
 In fact, I considered going down the [Medium](https://medium.com/) route because of convenience:
-* **Audience is baked in**
-* **No design or dev time**
-* **Automatic SEO**
-* **Much less research**
+* *Audience is baked in*
+* *No design or dev time*
+* *Automatic SEO*
+* *Much less research*
 
-However, my desire to learn how to build my own blog trumped the ease of baked in functionality and audience from other platforms. 
+However, my desire to learn trumped the ease of baked in functionality and audience from another platform. 
 
-Also, those were all features I could ultimately learn how to implement and consequently: blog about!
+Also, in terms of functionality I can ultimately learn how to implement it and consequently blog about!
 
 So...quite literally:
 
@@ -26,16 +26,15 @@ So...quite literally:
 In this HowTo we will:
 
 1. Lay down the necesssary infrastructure for a blog
-  * CMS
-  * Static Hosting
-  * Displaying our Posts
-  * Styling our Markdown using Tailwind CSS
+    * *CMS*
+    * *Static Hosting*
+    * *Display Markdown Posts*
+    * *Style our Markdown posts using Tailwind CSS*
 2. Deploy 1 to [Netlify](https://www.netlify.com/) so your audience can start reading your content as soon as you are done.
 
 ## Requirements
 
-* Node JS vLTS (Latest Stable Version)
-  [Install Node w/ NVM](https://heynode.com/tutorial/install-nodejs-locally-nvm/)
+* Node JS (Latest Stable Version) [Install Node w/ NVM](https://heynode.com/tutorial/install-nodejs-locally-nvm/)
 * Yarn Package Manager
   ```shell 
     # install yarn
@@ -58,7 +57,7 @@ yarn create nuxt-app <project-name>
 
 Follow the guide given your expertise, however the following settings are **required** in this tutorial:
 
-* **CSS framework:** Tailwind CSS
+* **CSS Framework:** Tailwind CSS
 * **Nuxt.js Modules:** Content - Git Based Headless CMS
 * **Rendering Mode:** Universal (SSR / SSG)
 * **Deployment Target:** Static (Static/Jamstack hosting)
@@ -66,8 +65,7 @@ Follow the guide given your expertise, however the following settings are **requ
 What your config should look like:
 <article-image src="howto-build-blog/init-project-options.png" > </article-image>
 
-
-Now, let's navigate to our project directory and install dependencies
+Now, navigate to our project directory, install project dependencies and run the dev server.
 
 ```shell
 # install dependencies
@@ -80,4 +78,7 @@ cd <project-name>
 yarn dev
 ```
 
+Encountered an error? *Google is your best friend!*
+
 ## Configuration
+

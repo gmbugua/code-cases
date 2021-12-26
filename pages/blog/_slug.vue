@@ -81,15 +81,15 @@ h1 {
   @apply bg-navy-default dark:bg-navy-lighter;
 }
 
-.nuxt-content ol ol:before {
-  @apply font-serif text-navy-default dark:text-ocean-default;
+.nuxt-content ol li:before {
+  @apply font-serif font-bold text-navy-default dark:text-ocean-default;
 }
 
 .nuxt-content :is(h1, h2, h3, h4, h5, h6) {
   @apply font-sans text-navy-default dark:text-ocean-default;
 }
 
-.nuxt-content :is(p, ul) {
+.nuxt-content :is(p, ul, ol) {
   @apply font-serif text-navy-default dark:text-ocean-lighter;
 }
 </style>
