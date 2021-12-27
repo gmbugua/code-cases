@@ -13,6 +13,8 @@
     "@nuxt/content": "^1.15.0",
     "@tailwindcss/typography": "^0.5.0",
     "core-js": "^3.15.1",
+    "glob-parent": "^5.1.2",
+    "nth-check": "^2.0.1",
     "nuxt": "^2.15.7",
     "prism-themes": "^1.9.0"
   },
