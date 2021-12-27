@@ -30,6 +30,12 @@ export default {
 </template>
 
 <style lang="postcss" scoped>
+
+article { 
+  padding: 0;
+  margin: 0 auto;
+}
+
 h1 {
   @apply text-2xl
     sm:text-4xl
@@ -53,7 +59,7 @@ h1 {
 }
 
 .nuxt-content {
-  @apply prose prose-sm sm:prose-lg;
+  @apply prose prose-base sm:prose-lg items-stretch;
 }
 
 .nuxt-content strong {

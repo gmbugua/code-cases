@@ -20,17 +20,27 @@
 </template>
 
 <script>
+// VUE
+import { mapMutations } from "vuex";
+
+// CUSTOM COMPONENTS
 import BlogItem from "~/components/BlogItem.vue";
 import Footer from "~/components/Footer.vue";
 import Header from "~/components/Header.vue";
 
 export default {
+  methods: {
+    ...mapMutations(["setDarkMode", "setLoaded"]),
+  },
   beforeMount() {
-    const isWindowDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (isWindowDarkMode) {
-      document.documentElement.classList.toggle("dark")
+    if (!this.$store.state.loaded) {
+      const isWindowDarkMode = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      document.documentElement.classList.toggle("dark");
+      this.setDarkMode(isWindowDarkMode);
+      this.setLoaded(true);
     }
-    this.$store.isDarkMode = isWindowDarkMode
   },
   components: {
     BlogItem,

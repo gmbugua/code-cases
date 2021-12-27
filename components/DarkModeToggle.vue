@@ -4,8 +4,8 @@ export default {
   methods: {
     ...mapMutations(['toggleDarkMode']),
     handleTestClick(checked) {
-      this.toggleDarkMode();
       document.documentElement.classList.toggle("dark")
+      this.toggleDarkMode();
     },
   },
 };
