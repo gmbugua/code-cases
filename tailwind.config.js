@@ -1,5 +1,18 @@
 module.exports = {
   darkMode: "class",
+  content: [
+    `components/**/*.{vue,js}`,
+    `layouts/**/*.vue`,
+    `pages/**/*.vue`,
+    `plugins/**/*.{js,ts}`,
+    `nuxt.config.{js,ts}`
+  ],
+  plugins: [require("@tailwindcss/typography")],
+  variants: {
+    extend: {
+      boxShadow: ["dark"]
+    }
+  },
   theme: {
     fontFamily: {
       sans: ["Fira Sans", "sans-serif"],
@@ -25,19 +38,4 @@ module.exports = {
       }
     }
   },
-  plugins: [require("@tailwindcss/typography")],
-  variants: {
-    extend: {
-      boxShadow: ["dark"]
-    }
-  },
-  purge: {
-    content: [
-      `components/**/*.{vue,js}`,
-      `layouts/**/*.vue`,
-      `pages/**/*.vue`,
-      `plugins/**/*.{js,ts}`,
-      `nuxt.config.{js,ts}`
-    ]
-  }
 };
