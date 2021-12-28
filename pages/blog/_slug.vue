@@ -1,14 +1,19 @@
 <script>
+// MIXINS
 import dateMixin from "~/mixins/dateMixin";
+import utilityMixin from "~/mixins/utilityMixin";
+
+// CUSTOM COMPONENTS
 import ReadTime from "~/components/ReadTime.vue";
+
 export default {
   layout: "post",
-  mixins: [dateMixin],
+  mixins: [dateMixin, utilityMixin],
   components: {
     ReadTime,
   },
-  beforeMount() {
-    debugger
+  mounted() {
+    this.loadTheme();
   },
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.slug).fetch();
@@ -33,8 +38,7 @@ export default {
 </template>
 
 <style lang="postcss" scoped>
-
-article { 
+article {
   padding: 0;
   margin: 0 auto;
 }

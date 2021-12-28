@@ -23,26 +23,19 @@
 // VUE
 import { mapMutations } from "vuex";
 
+// MIXINS
+import utilityMixin from "~/mixins/utilityMixin";
+
 // CUSTOM COMPONENTS
 import BlogItem from "~/components/BlogItem.vue";
 import Footer from "~/components/Footer.vue";
 import Header from "~/components/Header.vue";
 
 export default {
-  methods: {
-    ...mapMutations(["setDarkMode", "setLoaded"]),
+  mounted() {
+    this.loadTheme();
   },
-  beforeMount() {
-    if (!this.$store.state.loaded) {
-      debugger
-      const isWindowDarkMode = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      document.documentElement.classList.toggle("dark");
-      this.setDarkMode(isWindowDarkMode);
-      this.setLoaded(true);
-    }
-  },
+  mixins: [utilityMixin],
   components: {
     BlogItem,
     Footer,
