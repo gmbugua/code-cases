@@ -21,10 +21,7 @@
 
 <script>
 // VUE
-import { mapMutations } from "vuex";
-
-// MIXINS
-import utilityMixin from "~/mixins/utilityMixin";
+import { mapMutations } from 'vuex'
 
 // CUSTOM COMPONENTS
 import BlogItem from "~/components/BlogItem.vue";
@@ -35,11 +32,23 @@ export default {
   mounted() {
     this.loadTheme();
   },
-  mixins: [utilityMixin],
   components: {
     BlogItem,
     Footer,
     Header,
+  },
+  methods: {
+    ...mapMutations(['setTheme']),
+    loadTheme() {
+      const isWindowDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && isWindowDark)) {
+        document.documentElement.classList.add("dark");
+        this.setTheme("dark")
+      } else {
+        document.documentElement.classList.remove("dark");
+        this.setTheme("light")
+      }
+    },
   },
   async asyncData({ $content, params }) {
     const articles = await $content("articles")

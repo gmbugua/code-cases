@@ -1,14 +1,11 @@
 <script>
-// MIXINS
-import utilityMixin from "~/mixins/utilityMixin";
+// VUE
+import { mapMutations } from 'vuex'
 
 export default {
-  mixins: [utilityMixin],
   methods: {
-    isChecked() {
-      return localStorage.theme === "dark"
-    },
-    handleTestClick(checked) {
+    ...mapMutations(["setTheme"]),
+    handleTestClick() {
       if (localStorage.theme === "dark") {
         localStorage.theme = "light";
         document.documentElement.classList.remove("dark");
@@ -16,6 +13,10 @@ export default {
         localStorage.theme = "dark";
         document.documentElement.classList.add("dark");
       }
+      this.setTheme(localStorage.theme)
+    },
+    isDarkMode() {
+      return localStorage.theme === "dark";
     },
   },
 };
@@ -24,7 +25,7 @@ export default {
 
 <template>
   <label class="switch">
-    <input type="checkbox" :checked="isChecked" @change="handleTestClick" />
+    <input type="checkbox" :checked="isDarkMode" @change="handleTestClick" />
     <span class="slider round"></span>
   </label>
 </template>
