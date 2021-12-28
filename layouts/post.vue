@@ -24,7 +24,6 @@ export default {
 };
 </script>
 
-
 <style lang="postcss" scoped>
 #post-header {
   @apply flex justify-between items-center mx-10 mt-6;

@@ -34,6 +34,7 @@ export default {
   },
   beforeMount() {
     if (!this.$store.state.loaded) {
+      debugger
       const isWindowDarkMode = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;

@@ -63,7 +63,7 @@ Follow the guide given your expertise, however the following settings are **requ
 * **Deployment Target:** Static (Static/Jamstack hosting)
 
 What your config should look like:
-<article-image src="howto-build-blog/init-project-options.png" > </article-image>
+<article-image src="howto-build-blog/init-project-options.png" alt="Nuxt App Configuration" > </article-image>
 
 Now, navigate to our project directory, install project dependencies and run the dev server.
 

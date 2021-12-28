@@ -15,7 +15,7 @@
       </div>
       <div class="sub-header-right">
         <SeatedMan id="seated-man" v-if="!this.$store.state.isDarkMode"/> 
-        <SeatedManDark id="seated-man" v-if="this.$store.state.isDarkMode"/>
+        <SeatedManDark id="seated-man" v-else/>
       </div>
     </div>
   </div>
