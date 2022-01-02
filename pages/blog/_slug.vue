@@ -62,45 +62,4 @@ h1 {
 .sub-heading p {
   @apply mr-3 text-lg font-light text-navy-default dark:text-ocean-lighter;
 }
-
-.nuxt-content {
-  @apply prose prose-base sm:prose-lg items-stretch;
-}
-
-.nuxt-content strong {
-  @apply font-serif font-bold text-navy-default dark:text-ocean-default;
-}
-
-.nuxt-content a {
-  @apply border-b-4
-  text-navy-lighter
-  border-ocean-lighter
-  dark:text-ocean-default
-  dark:border-navy-lighter
-    no-underline;
-}
-
-.nuxt-content a:hover {
-  @apply ease-linear
-    transition-colors
-    text-navy-default
-    border-ocean-lightest
-    dark:text-ocean-lightest;
-}
-
-.nuxt-content ul li:before {
-  @apply bg-navy-default dark:bg-navy-lighter;
-}
-
-.nuxt-content ol li:before {
-  @apply font-serif font-bold text-navy-default dark:text-ocean-default;
-}
-
-.nuxt-content :is(h1, h2, h3, h4, h5, h6) {
-  @apply font-sans text-navy-default dark:text-ocean-default;
-}
-
-.nuxt-content :is(p, ul, ol) {
-  @apply font-serif text-navy-default dark:text-ocean-lighter;
-}
 </style>

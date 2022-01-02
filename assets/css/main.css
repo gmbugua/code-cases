@@ -20,3 +20,63 @@ body {
       px-11 
       pb-11;
 }
+
+.nuxt-content {
+  @apply 
+    items-stretch
+
+    prose
+    prose-base 
+    sm:prose-lg
+
+    /* prose-headings */
+    prose-headings:font-sans
+    prose-headings:text-navy-default
+    prose-headings:dark:text-ocean-default
+
+    /* prose-p */
+    prose-p:font-serif
+  prose-p:text-navy-default
+  prose-p:dark:text-ocean-lighter
+
+    /* prose-strong */
+    prose-strong:font-serif
+    prose-strong:font-bold
+    prose-strong:text-navy-default
+    prose-strong:dark:text-ocean-default
+
+    /* prose-ul, prose-ol, prose-li */
+    prose-ul:font-serif
+    prose-ul:text-navy-default
+    prose-ul:dark:text-ocean-lighter
+
+    prose-ol:font-serif
+    prose-ol:text-navy-default
+    prose-ol:dark:text-ocean-lighter
+
+    prose-li:marker:prose-xl
+    prose-li:marker:font-sans
+    prose-li:marker:font-bold
+    prose-li:marker:text-navy-lighter
+    prose-li:marker:dark:text-ocean-default
+
+    /* prose-a*/
+    prose-a:border-b-4
+    prose-a:text-navy-lighter
+    prose-a:dark:text-ocean-default
+    prose-a:border-ocean-lighter
+    prose-a:dark:border-navy-lighter
+    prose-a:no-underline
+
+    /* prose-a hover */
+    hover:prose-a:ease-linear
+    hover:prose-a:transition-colors
+    hover:prose-a:text-navy-default
+    hover:dark:text-ocean-lightest
+    hover:prose-a:border-ocean-lightest
+
+}
+
+.nuxt-content blockquote {
+  @apply prose-p:text-navy-lighter prose-p:dark:text-ocean-default
+}
