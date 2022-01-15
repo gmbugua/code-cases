@@ -39,8 +39,6 @@ a {
   dark:text-ocean-default
   dark:border-navy-lighter
     no-underline;
-
-  /* border-bottom: 0.25rem solid; */
 }
 
 a:hover {
@@ -48,6 +46,7 @@ a:hover {
     transition-colors
     text-navy-default
     border-ocean-lightest
+    dark:border-navy-lighter
     dark:text-ocean-lightest;
 }
 

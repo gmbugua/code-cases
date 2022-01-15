@@ -3,7 +3,7 @@
 
       <section class="item-left">
         <div class="item-title-date">
-          <h1 class="item-title">{{ title.toLowerCase() }}</h1>
+          <h1 class="item-title">{{ title }}</h1>
           <p class="item-date">{{ formatDate(lastUpdated).toLowerCase() }} </p>
         </div>
         <p class="item-description">{{ description }}</p>
