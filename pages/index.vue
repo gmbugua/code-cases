@@ -38,10 +38,11 @@ export default {
     Header,
   },
   methods: {
-    ...mapMutations(['setTheme']),
+    ...mapMutations(['setTheme', 'setWindowTheme']),
     loadTheme() {
       const isWindowDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && isWindowDark)) {
+      this.setWindowTheme(isWindowDark ? "dark" : "light");
+      if (sessionStorage.theme === 'dark' || (!('theme' in sessionStorage) && isWindowDark)) {
         document.documentElement.classList.add("dark");
         this.setTheme("dark")
       } else {

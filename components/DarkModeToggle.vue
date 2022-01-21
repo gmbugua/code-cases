@@ -3,20 +3,29 @@
 import { mapMutations } from 'vuex'
 
 export default {
+  
   methods: {
-    ...mapMutations(["setTheme"]),
+    ...mapMutations(["setTheme", "getWindowTheme"]),
     handleTestClick() {
-      if (localStorage.theme === "dark") {
-        localStorage.theme = "light";
+      debugger
+      if (sessionStorage.theme === undefined && this.$store.state.windowTheme === "dark") {
+        sessionStorage.theme = "light";
+        document.documentElement.classList.remove("dark");
+        return;
+      }
+
+      if (sessionStorage.theme === "dark") {
+        sessionStorage.theme = "light";
         document.documentElement.classList.remove("dark");
       } else {
-        localStorage.theme = "dark";
+        sessionStorage.theme = "dark";
         document.documentElement.classList.add("dark");
       }
-      this.setTheme(localStorage.theme)
+
+      this.setTheme(sessionStorage.theme)
     },
     isDarkMode() {
-      return localStorage.theme === "dark";
+      return sessionStorage.theme === "dark";
     },
   },
 };
