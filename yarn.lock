@@ -1879,10 +1879,10 @@
     webpack-node-externals "^3.0.0"
     webpackbar "^4.0.0"
 
-"@nuxtjs/svg@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/svg/-/svg-0.3.0.tgz#a6f91743ffba8ed05766c013a401c96452c35176"
-  integrity sha512-eokmEiDYE6bZR6FNUQ6VlOnck1Z2lfxlZUv56JNXXSpD6SR6qvfxmQYgTuxD++7//LcsRSqBOb54EL+ebwnDRQ==
+"@nuxtjs/svg@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/svg/-/svg-0.4.0.tgz#db6b188bc74d71021d58ea8c45a03fe4c1f30011"
+  integrity sha512-XF8uvV5YKBPAJr52SFRVkhltAsjCBTwwTc4GTysSm8WPYB2utJLY48qXdVC/J9dNQiMd7NHo1xmEYEqQfzqpqg==
   dependencies:
     file-loader "^6.0.0"
     raw-loader "^4.0.0"
@@ -3998,10 +3998,10 @@ core-js@^2.4.0, core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.20.2:
-  version "3.20.2"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.20.2.tgz#46468d8601eafc8b266bd2dd6bf9dee622779581"
-  integrity sha512-nuqhq11DcOAbFBV4zCbKeGbKQsUDRqTX0oqx7AttUBuqe3h20ixsE039QHelbL6P4h+9kytVqyEtyZ6gsiwEYw==
+core-js@^3.22.5:
+  version "3.22.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.22.5.tgz#a5f5a58e663d5c0ebb4e680cd7be37536fb2a9cf"
+  integrity sha512-VP/xYuvJ0MJWRAobcmQ8F2H6Bsn+s7zqAAjFaHGBMc5AQm7zaelhD1LGduFn2EehEcQcU+br6t+fwbpQ5d1ZWA==
 
 core-util-is@~1.0.0:
   version "1.0.3"
