@@ -39,7 +39,7 @@ export default {
         this.$refs.imgmodal.classList.remove("hidden");
         setTimeout(() => {
           this.$refs.imgmodal.classList.remove("visuallyhidden");
-        }, 20);
+        }, 5);
       } else {
         this.$refs.imgmodal.classList.add("visuallyhidden");
         this.$refs.imgmodal.addEventListener(
@@ -82,7 +82,7 @@ img {
     z-10
     opacity-100;
 
-  transition: opacity 600ms linear;
+  transition: opacity 400ms linear;
 }
 
 .modal .article-image {
@@ -95,7 +95,7 @@ img {
 
 .visuallyhidden {
   opacity: 0;
-  transition: opacity 600ms linear;
+  transition: opacity 400ms linear;
 }
 
 /* Hover Shadows */
