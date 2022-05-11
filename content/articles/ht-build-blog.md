@@ -28,7 +28,7 @@ On that note, in this HowTo we will lay down the necesssary infrastructure for a
 
 * Node JS (Latest Stable Version) [Install Node w/ NVM](https://heynode.com/tutorial/install-nodejs-locally-nvm/)
 * Yarn Package Manager
-  ```shell 
+  ```shell
     # install yarn
     npm install --global yarn
 
