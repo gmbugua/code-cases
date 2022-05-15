@@ -7,7 +7,6 @@ export default {
   methods: {
     ...mapMutations(["setTheme", "getWindowTheme"]),
     handleTestClick() {
-      debugger
       if (sessionStorage.theme === undefined && this.$store.state.windowTheme === "dark") {
         sessionStorage.theme = "light";
         document.documentElement.classList.remove("dark");

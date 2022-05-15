@@ -68,6 +68,9 @@ body {
     prose-a:dark:border-navy-lighter
     prose-a:no-underline
 
+    /* prose-code */
+    prose-code:text-ocean-default
+
     /* prose-a hover */
     hover:prose-a:ease-linear
     hover:prose-a:transition-colors
