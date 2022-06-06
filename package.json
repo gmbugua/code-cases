@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxt/content": "^1.15.1",
+    "@nuxt/content": "^2.0.1",
     "@tailwindcss/typography": "^0.5.0",
     "core-js": "^3.22.8",
     "glob-parent": "^6.0.2",
